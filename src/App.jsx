@@ -16,6 +16,7 @@ function App() {
   const { theme } = useContext(ThemeContext);
   return (
     <div
+    className='overflow-x-hidden'
       style={{
         backgroundColor: theme.background,
         color: theme.color,

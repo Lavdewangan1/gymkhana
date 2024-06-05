@@ -1,11 +1,14 @@
-import React, { createContext, useState, useEffect, useLayoutEffect } from "react"
+import React, { createContext, useState, useLayoutEffect } from "react"
+import sun from "../assets/icons/sun.svg";
+import moon from "../assets/icons/moon.svg";
 
-const ThemeContext = createContext("light")
+const ThemeContext = createContext("dark")
 
 const lightTheme = {
+  name: "light",
   background: "#fff",
   color: "#000",
-  icon: "☀️",
+  icon: sun,
   button: {
     buttonBgColor: "#000",
     buttonTextColor: "#fff",
@@ -17,9 +20,10 @@ const lightTheme = {
 }
 
 const darkTheme = {
+  name: "dark",
   background: "#000",
   color: "#fff",
-  icon: "🌙",
+  icon: moon,
   button: {
     buttonBgColor: "#fff",
     buttonTextColor: "#000",
@@ -47,7 +51,6 @@ const ThemeProvider = ({ children }) => {
 
   useLayoutEffect(() => {
     const savedTheme = localStorage.getItem("selectedTheme")
-    
     if (savedTheme) {
       savedTheme === "light" ? setThemeName("light") : setThemeName("dark")
       savedTheme === "light" ? setTheme(lightTheme) : setTheme(darkTheme)
