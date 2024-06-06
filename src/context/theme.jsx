@@ -36,6 +36,7 @@ const darkTheme = {
 
 
 const ThemeProvider = ({ children }) => {
+  const navHeight = "72px";
   const [theme, setTheme] = useState(lightTheme)
   const [themeName, setThemeName] = useState("light")
   const toggleTheme = () => {
@@ -47,8 +48,6 @@ const ThemeProvider = ({ children }) => {
   }
 
 
-  // Retrieve theme from local storage, if available
-
   useLayoutEffect(() => {
     const savedTheme = localStorage.getItem("selectedTheme")
     if (savedTheme) {
@@ -58,7 +57,7 @@ const ThemeProvider = ({ children }) => {
 
   }, [])
 
-  return <ThemeContext.Provider value={{ theme, toggleTheme, themeName }}>{children}</ThemeContext.Provider>
+  return <ThemeContext.Provider value={{ theme, toggleTheme, themeName, navHeight }}>{children}</ThemeContext.Provider>
 }
 
 export { ThemeProvider, ThemeContext }

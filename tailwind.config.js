@@ -6,6 +6,11 @@ export default {
       fontFamily: {
         sans: ["Roboto", "sans-serif"],
       },
+      colors:{
+        primary: "#000",
+        secondary: "#fff",
+        tertiary: "#96FB56",
+      }
     },
   },
   plugins: [],

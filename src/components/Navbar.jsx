@@ -5,22 +5,19 @@ import clsx from "clsx";
 import { useRef } from "react";
 import { useEffect } from "react";
 
-function navLinkClass(isActive, theme) {
+function navLinkClass(isActive) {
   return clsx(
-    "block mx-auto w-1/2 sm:w-full rounded-lg p-1 px-3 py-1 slow duration-100 hover:text-sky-500",
-    theme.name === "light" ? "text-black hover:bg-sky-200" : "text-white",
+    "block mx-auto w-1/2 sm:w-full px-1 slow duration-100 hover:text-tertiary",
     {
-      "text-sky-500 border-b-2 border-sky-400": isActive,
+      "border-b-2 border-tertiary text-tertiary": isActive,
     }
   );
 }
 
 export default function Navbar() {
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const { theme, toggleTheme, navHeight } = useContext(ThemeContext);
   const [navbarShown, setNavbarShown] = useState(false);
-
   const navbarRef = useRef(null);
-
   useEffect(() => {
     function handleMouseDown(event) {
       if (
@@ -54,6 +51,7 @@ export default function Navbar() {
     <nav
       aria-label="Site Nav"
       className={clsx(`flex items-center justify-between max-w-8xl px-8 py-4 mx-auto backdrop-blur-md slow duration-100 fixed w-screen top-0 z-10 border-b drop-shadow-sm`, theme.name === "light" ? "bg-white" : "bg-black",)}
+      style={{ height: navHeight }}
     >
       <NavLink
         to="/"
@@ -69,13 +67,13 @@ export default function Navbar() {
       <ul
         ref={navbarRef}
         className={clsx(
-          `fixed sm:static top-20 z-10 gap-2 text-md w-full sm:flex sm:flex-row sm:w-fit flex-col sm:bg-inherit items-center justify-between nav-menu`,
+          `fixed sm:static top-20 z-10 gap-2 text-md w-full sm:flex sm:flex-row sm:justify-between sm:w-96 flex-col sm:bg-inherit items-center justify-between nav-menu`,
           navbarShown ? "navbar-shown" : "navbar-hidden",
           theme.name === "light" ? "bg-white" : "bg-black",
         )}
         onClick={toggleNavbar}
       >
-        <li className="mb-4 sm:mb-0 sm:ml-8 nav-item text-center">
+        <li className="nav-item text-center">
           <NavLink
             to="/"
             className={({ isActive }) => navLinkClass(isActive, theme)}
@@ -83,7 +81,7 @@ export default function Navbar() {
             Home
           </NavLink>
         </li>
-        <li className="mb-4 sm:mb-0 sm:ml-8 nav-item text-center">
+        <li className="nav-item text-center">
           <NavLink
             to="/GuidePage"
             className={({ isActive }) => navLinkClass(isActive, theme)}
@@ -91,29 +89,13 @@ export default function Navbar() {
             Guide
           </NavLink>
         </li>
-        <li className="mb-4 sm:mb-0 sm:ml-8 nav-item text-center">
+        <li className="nav-item text-center">
 
           <NavLink
             to="/SchedulePage"
             className={({ isActive }) => navLinkClass(isActive, theme)}
           >
             Schedule
-          </NavLink>
-        </li>
-        <li className="mb-4 sm:mb-0 sm:ml-8 nav-item text-center">
-          <NavLink
-            className={({ isActive }) => navLinkClass(isActive, theme)}
-            to="/DocsPage"
-          >
-            Docs
-          </NavLink>
-        </li>
-        <li className="mb-4 sm:mb-0 sm:ml-8 nav-item text-center">
-          <NavLink
-            className={({ isActive }) => navLinkClass(isActive, theme)}
-            to="/ContributorsPage"
-          >
-            Contributors
           </NavLink>
         </li>
       </ul>

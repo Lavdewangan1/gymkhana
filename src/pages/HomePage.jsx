@@ -1,63 +1,49 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import Carousel from "../components/Carousel";
+
 
 export default function HomePage() {
+  const images = ["https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg", "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg", "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg", "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg", "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg"];
   return (
     <>
       <section>
-        <div className="mx-auto max-w-screen-xl min-w-screen-sm px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8">
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16 overflow-x-hidden">
-            <motion.div 
-              initial={{ opacity: 0, x: 200 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 2}}
-            className="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full">
-              <img
-                alt="a girl doing exercises"
-                src="https://plus.unsplash.com/premium_photo-1664109999537-088e7d964da2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
-                className="absolute inset-0 h-full w-full object-cover"
-                loading="lazy"
-              />
-            </motion.div>
-
-            <motion.div
-            initial={{ opacity: 0, x: -200 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 2 }}
-            className="lg:py-24">
-              <h2 className="text-6xl font-bold sm:text-6xl text-center">
-                <div className="mb-8">Your Ultimate Destination for </div>
-                <span className="bg-indigo-500 text-white p-auto">Healthier You!</span>
-              </h2>
-            
+        <div className=" flex items-center justify-center w-screen h-fit home-content relative">
+          <Carousel images={images} className="overflow-x-hidden select-none w-4/6" />
+          <div className=" w-2/6 flex justify-center home-head">
+            <h2 className="text-6xl font-bold sm:text-6xl text-center">
+              <div className="mb-8">Your Ultimate Destination for </div>
+              <span className="bg-tertiary text-primary p-auto">Healthier You!</span>
+            </h2>
+          </div>
+          {/* <div className=" w-2/5">
               <p className="mt-8 text-center">
-               We believe that fitness should be fun and enjoyable.That's why
+                We believe that fitness should be fun and enjoyable.That's why
                 we've created a vibrant and friendly atmosphere where you can
-                connect with like-minded individuals and make new friends. 
+                connect with like-minded individuals and make new friends.
               </p>
               <p className="mt-4 text-center sm:text-lg">
                 Join us today and discover the joy of fitness!
               </p>
-            </motion.div>
-          </div>
+            </div> */}
         </div>
       </section>
       <section>
         <div className="mx-auto max-w-screen-2xl px-4 py-8 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-            <motion.div 
-            // initial={{ opacity: 0, y: 200 }}
-            // animate={{ opacity: 1, y: 0 }}
-            // transition={{ duration: 2 }}
-            className="bg-blue-900 p-8 md:p-12 lg:px-16 lg:py-24">
+            <motion.div
+              // initial={{ opacity: 0, y: 200 }}
+              // animate={{ opacity: 1, y: 0 }}
+              // transition={{ duration: 2 }}
+              className="bg-tertiary p-8 md:p-12 lg:px-16 lg:py-24">
 
               <div className="mx-auto max-w-xl text-center">
-                <h2 className="text-2xl font-bold text-white md:text-3xl">
+                <h2 className="text-2xl font-bold text-primary md:text-3xl">
                   Your One-Stop Destination for Total Body Transformation{" "}
                 </h2>
 
-                <p className="hidden text-white/90 sm:mt-4 sm:block">
+                <p className="hidden text-primary sm:mt-4 sm:block">
                   Whether you are a beginner or an advanced fitness enthusiast,
                   our wide range of equipment, classes, and training programs
                   will challenge you to reach your full potential. From strength
@@ -98,7 +84,7 @@ export default function HomePage() {
       <section>
         <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
           <header className="text-center">
-            <h2 className="text-xl font-bold  sm:text-4xl text-indigo-500">
+            <h2 className="text-xl font-bold  sm:text-4xl text-tertiary">
               Your Ultimate Destination for Fitness
             </h2>
 
