@@ -29,7 +29,7 @@ export default function HomePage() {
         </div>
       </section>
       <section className=" who-can h-fit">
-        <div className="grid md:grid-cols-2 grid-cols-1 grid-rows-3 justify-items-center items-center gap-3 pt-10 px-4">
+        <div className="grid md:grid-cols-2 grid-cols-1 justify-items-center items-center gap-3 py-10 px-4">
           <img src="https://img.freepik.com/premium-photo/colorful-flower-with-green-leaf_1028782-202406.jpg" alt="" />
           <img src="https://img.freepik.com/premium-photo/colorful-flower-with-green-leaf_1028782-202406.jpg" alt="" />
           <img src="https://img.freepik.com/premium-photo/colorful-flower-with-green-leaf_1028782-202406.jpg" alt="" />
@@ -38,7 +38,7 @@ export default function HomePage() {
       </section>
 
       <section className=" steps">
-        <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
+        <div className="max-w-screen-xl px-4 mx-auto">
           <header className="text-center">
             <h2 className="text-xl font-bold  sm:text-4xl text-tertiary">
               Your Ultimate Destination for Fitness
@@ -67,17 +67,6 @@ export default function HomePage() {
               <div className="relative block group">
                 <img
                   src="https://images.unsplash.com/photo-1581009137042-c552e485697a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                  alt="exercise"
-                  loading="lazy"
-                  className="object-cover h-full w-full transition duration-500 aspect-square group-hover:opacity-90"
-                />
-              </div>
-            </li>
-
-            <li className="lg:col-span-2 lg:col-start-2 lg:row-span-2 lg:row-start-1">
-              <div className="relative block group">
-                <img
-                  src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
                   alt="exercise"
                   loading="lazy"
                   className="object-cover h-full w-full transition duration-500 aspect-square group-hover:opacity-90"
