@@ -9,12 +9,11 @@ export default function HomePage() {
   return (
     <>
       <section>
-        <div className=" flex items-center justify-center w-screen h-fit home-content relative">
-          <Carousel images={images} className="overflow-x-hidden select-none w-4/6" />
-          <div className=" w-2/6 flex justify-center home-head">
-            <h2 className="text-6xl font-bold sm:text-6xl text-center">
-              <div className="mb-8">Your Ultimate Destination for </div>
-              <span className="bg-tertiary text-primary p-auto">Healthier You!</span>
+        <div className=" flex items-center justify-center w-screen h-fit home-content relative lg:flex-nowrap flex-wrap">
+          <Carousel images={images} className="overflow-x-hidden home-carousel select-none lg:w-4/6 w-full" />
+          <div className=" lg:w-2/6 flex justify-center lg:static absolute lg:translate-x-0 -translate-x-1/2 left-1/2 bottom-0 home-head w-full">
+            <h2 className="text-3xl font-bold sm:text-4xl text-center">
+              <div className="">Your Ultimate Destination for </div>
             </h2>
           </div>
           {/* <div className=" w-2/5">
@@ -29,59 +28,16 @@ export default function HomePage() {
             </div> */}
         </div>
       </section>
-      <section>
-        <div className="mx-auto max-w-screen-2xl px-4 py-8 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-            <motion.div
-              // initial={{ opacity: 0, y: 200 }}
-              // animate={{ opacity: 1, y: 0 }}
-              // transition={{ duration: 2 }}
-              className="bg-tertiary p-8 md:p-12 lg:px-16 lg:py-24">
-
-              <div className="mx-auto max-w-xl text-center">
-                <h2 className="text-2xl font-bold text-primary md:text-3xl">
-                  Your One-Stop Destination for Total Body Transformation{" "}
-                </h2>
-
-                <p className="hidden text-primary sm:mt-4 sm:block">
-                  Whether you are a beginner or an advanced fitness enthusiast,
-                  our wide range of equipment, classes, and training programs
-                  will challenge you to reach your full potential. From strength
-                  training and cardio exercises to yoga and dance classes, we
-                  have something for everyone.
-                </p>
-
-                <div className="mt-4 md:mt-8">
-                  <Link
-                    to="/GuidePage"
-                    className="inline-block rounded border border-white bg-white px-12 py-3 text-sm font-medium text-blue-900 transition hover:bg-transparent hover:text-white"
-                  >
-                    Get Started Today
-                  </Link>
-                </div>
-              </div>
-            </motion.div>
-
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-1 lg:grid-cols-2">
-              <img
-                alt="Gym room"
-                src="https://images.unsplash.com/photo-1590487988256-9ed24133863e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=728&q=80"
-                className="h-40 w-full object-cover sm:h-56 md:h-full rounded"
-                loading="lazy"
-              />
-
-              <img
-                alt="a girl doing exercises"
-                src="https://images.unsplash.com/photo-1550345332-09e3ac987658?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-                className="h-40 w-full object-cover sm:h-56 md:h-full rounded"
-                loading="lazy"
-              />
-            </div>
-          </div>
+      <section className=" who-can h-fit">
+        <div className="grid md:grid-cols-2 grid-cols-1 grid-rows-3 justify-items-center items-center gap-3 pt-10 px-4">
+          <img src="https://img.freepik.com/premium-photo/colorful-flower-with-green-leaf_1028782-202406.jpg" alt="" />
+          <img src="https://img.freepik.com/premium-photo/colorful-flower-with-green-leaf_1028782-202406.jpg" alt="" />
+          <img src="https://img.freepik.com/premium-photo/colorful-flower-with-green-leaf_1028782-202406.jpg" alt="" />
+          <img src="https://img.freepik.com/premium-photo/colorful-flower-with-green-leaf_1028782-202406.jpg" alt="" />
         </div>
       </section>
 
-      <section>
+      <section className=" steps">
         <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
           <header className="text-center">
             <h2 className="text-xl font-bold  sm:text-4xl text-tertiary">

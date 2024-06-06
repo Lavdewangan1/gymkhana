@@ -9,7 +9,7 @@ const Carousel = ({ images, className }) => {
                 infiniteLoop={true}
                 emulateTouch={true}
                 autoPlay={true}
-                interval={2000}
+                interval={3000}
                 showThumbs={false}
                 showArrows={false}
                 showIndicators={false}
