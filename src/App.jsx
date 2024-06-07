@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { Suspense, useContext } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -12,27 +12,30 @@ import SchedulePage from './pages/SchedulePage';
 
 function App() {
   const { theme, navHeight } = useContext(ThemeContext);
+
   return (
-    <div
-      className='overflow-x-hidden'
-      style={{
-        backgroundColor: theme.background,
-        color: theme.color,
-        button: theme.button,
-        link: theme.link,
-        paddingTop: navHeight,
-      }}
-    >
-      <Navbar />
-      <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='/GuidePage' element={<GuidePage />} />
-        <Route path='/SchedulePage' element={<SchedulePage />} />
-        <Route path='/AddExercisePage' element={<AddExercisePage />} />
-        <Route path='*' element={<PageNotFound />} />
-      </Routes>
-      <Footer />
-    </div>
+    <Suspense fallback={<div>Loading...</div>}>
+      <div
+        className='overflow-x-hidden'
+        style={{
+          backgroundColor: theme.background,
+          color: theme.color,
+          button: theme.button,
+          link: theme.link,
+          paddingTop: navHeight,
+        }}
+      >
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/GuidePage' element={<GuidePage />} />
+          <Route path='/SchedulePage' element={<SchedulePage />} />
+          <Route path='/AddExercisePage' element={<AddExercisePage />} />
+          <Route path='*' element={<PageNotFound />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Suspense>
   );
 }
 

@@ -50,7 +50,7 @@ export default function Navbar() {
   return (
     <nav
       aria-label="Site Nav"
-      className={clsx(`flex items-center justify-between max-w-8xl px-8 py-4 mx-auto backdrop-blur-md slow duration-100 fixed w-screen top-0 z-10 border-b drop-shadow-sm`, theme.name === "light" ? "bg-white" : "bg-black",)}
+      className={clsx(`flex items-center justify-between max-w-8xl px-8 py-4 mx-auto slow duration-100 fixed w-screen top-0 z-10 drop-shadow-sm`, theme.name === "light" ? "bg-white" : "bg-black",)}
       style={{ height: navHeight }}
     >
       <NavLink
