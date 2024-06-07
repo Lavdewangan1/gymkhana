@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+.heading{
+  font-family: 'Exo 2', sans-serif;
+}
 
 .slow {
   transition-timing-function: linear;
@@ -93,8 +98,6 @@ nav>ul {
   clip-path: polygon(0% 0%, 100% 10%, 100% 90%, 0% 100%);
 }
 
-
-
 .popular-plans{
   position: relative;
   color: #000;
@@ -110,7 +113,10 @@ nav>ul {
   height: 100%;
   @apply bg-tertiary;
   clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0% 100%);
+}
 
+.demo-video>h1{
+  @apply lg:text-[15rem] md:text-[13rem] text-[10rem] opacity-30;
 }
 
 @media screen and (max-width: 768px) {

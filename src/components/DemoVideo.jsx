@@ -6,9 +6,9 @@ import Heading from './ui/Heading';
 function DemoVideo() {
     return (
         <section className=" demo-video flex justify-center items-center w-full">
-            <Heading>DE</Heading>
+            <h1>DE</h1>
             <Video />
-            <Heading>MO</Heading>
+            <h1>MO</h1>
         </section>
     )
 }
