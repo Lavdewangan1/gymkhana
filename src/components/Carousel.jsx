@@ -2,7 +2,7 @@ import React from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel as ReactCarousel } from 'react-responsive-carousel';
 
-const Carousel = ({ images, className }) => {
+const Carousel = ({ images, className, onChange }) => {
     return (
         <div className={className}>
             <ReactCarousel
@@ -15,6 +15,7 @@ const Carousel = ({ images, className }) => {
                 showIndicators={false}
                 showStatus={false}
                 stopOnHover={false}
+                onChange={onChange}
             >
                 {images.map((image, index) => (
                     <div key={index}>
