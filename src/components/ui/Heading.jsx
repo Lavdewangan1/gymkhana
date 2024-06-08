@@ -2,7 +2,7 @@ import React from 'react'
 
 function Heading(props) {
   return (
-    <h1 className={`heading lg:text-6xl md:text-5xl text-2xl ${props.className}`}>
+    <h1 className={`heading lg:text-[3vw] md:text-[4vw] sm:text-[6vw] text-[6vw] montserrat ${props.className}`}>
         {props.children}
     </h1>
   )

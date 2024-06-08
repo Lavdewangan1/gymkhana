@@ -1,4 +1,5 @@
 import React, { Suspense, useContext } from 'react';
+import './assets/fonts.css'
 import './App.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';

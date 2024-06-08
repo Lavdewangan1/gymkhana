@@ -1,12 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-.heading{
-  font-family: 'Exo 2', sans-serif;
-}
 
 .slow {
   transition-timing-function: linear;
@@ -39,6 +34,10 @@ nav>ul {
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+.home-head {
+  z-index: 2;
 }
 
 .home-content::before {
@@ -140,10 +139,6 @@ nav>ul {
     z-index: 1;
     clip-path: polygon(70% 78%, 30% 101%, 0 101%, 0 50%);
   }
-}
-
-.home-head {
-  z-index: 2;
 }
 
 @media screen and (max-width: 639px) {
