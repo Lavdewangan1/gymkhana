@@ -67,7 +67,7 @@ export default function Navbar() {
       <ul
         ref={navbarRef}
         className={clsx(
-          `fixed sm:static top-20 z-10 gap-2 text-md w-full sm:flex sm:flex-row sm:justify-between sm:w-96 flex-col sm:bg-inherit items-center justify-between nav-menu`,
+          `fixed sm:static top-20 z-10 gap-2 text-md w-full sm:flex sm:flex-row sm:justify-between sm:w-fit flex-col sm:bg-inherit items-center justify-between nav-menu`,
           navbarShown ? "navbar-shown" : "navbar-hidden",
           theme.name === "light" ? "bg-white" : "bg-black",
         )}
@@ -79,6 +79,30 @@ export default function Navbar() {
             className={({ isActive }) => navLinkClass(isActive, theme)}
           >
             Home
+          </NavLink>
+        </li>
+        <li className="nav-item text-center">
+          <NavLink
+            to="/Trainers"
+            className={({ isActive }) => navLinkClass(isActive, theme)}
+          >
+            Trainers
+          </NavLink>
+        </li>
+        <li className="nav-item text-center">
+          <NavLink
+            to="/Membership"
+            className={({ isActive }) => navLinkClass(isActive, theme)}
+          >
+            Membership
+          </NavLink>
+        </li>
+        <li className="nav-item text-center">
+          <NavLink
+            to="/About"
+            className={({ isActive }) => navLinkClass(isActive, theme)}
+          >
+            About
           </NavLink>
         </li>
         <li className="nav-item text-center">

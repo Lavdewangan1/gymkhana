@@ -11,6 +11,8 @@ import { ThemeContext } from './context/theme';
 import PageNotFound from './components/PageNotFound';
 import SchedulePage from './pages/SchedulePage';
 import Trainers from './pages/Trainers';
+import Membership from './pages/Membership';
+import About from './pages/About';
 
 function App() {
   const { theme, navHeight } = useContext(ThemeContext);
@@ -32,6 +34,8 @@ function App() {
           <Route path='/' element={<HomePage />} />
           <Route path='/GuidePage' element={<GuidePage />} />
           <Route path='/Trainers' element={<Trainers />} />
+          <Route path='/Membership' element={<Membership />} />
+          <Route path='/About' element={<About />} />
           <Route path='/SchedulePage' element={<SchedulePage />} />
           <Route path='/AddExercisePage' element={<AddExercisePage />} />
           <Route path='*' element={<PageNotFound />} />
