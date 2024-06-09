@@ -10,7 +10,6 @@ function Steps() {
             <Heading className=" text-black">
               Your Ultimate Destination for Fitness
             </Heading>
-
             <Text className="max-w-md mx-auto mt-4 sm:text-lg">
               Our state-of-the-art facility and expert trainers are here to help
               you achieve your fitness goals, whether you're just starting out

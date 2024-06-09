@@ -10,6 +10,7 @@ import AddExercisePage from './pages/AddExercisePage';
 import { ThemeContext } from './context/theme';
 import PageNotFound from './components/PageNotFound';
 import SchedulePage from './pages/SchedulePage';
+import Trainers from './pages/Trainers';
 
 function App() {
   const { theme, navHeight } = useContext(ThemeContext);
@@ -30,6 +31,7 @@ function App() {
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='/GuidePage' element={<GuidePage />} />
+          <Route path='/Trainers' element={<Trainers />} />
           <Route path='/SchedulePage' element={<SchedulePage />} />
           <Route path='/AddExercisePage' element={<AddExercisePage />} />
           <Route path='*' element={<PageNotFound />} />
