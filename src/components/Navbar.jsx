@@ -99,27 +99,18 @@ export default function Navbar() {
         </li>
         <li className="nav-item text-center">
           <NavLink
+            to="/Contact"
+            className={({ isActive }) => navLinkClass(isActive, theme)}
+          >
+            Contact Us
+          </NavLink>
+        </li>
+        <li className="nav-item text-center">
+          <NavLink
             to="/About"
             className={({ isActive }) => navLinkClass(isActive, theme)}
           >
             About
-          </NavLink>
-        </li>
-        <li className="nav-item text-center">
-          <NavLink
-            to="/GuidePage"
-            className={({ isActive }) => navLinkClass(isActive, theme)}
-          >
-            Guide
-          </NavLink>
-        </li>
-        <li className="nav-item text-center">
-
-          <NavLink
-            to="/SchedulePage"
-            className={({ isActive }) => navLinkClass(isActive, theme)}
-          >
-            Schedule
           </NavLink>
         </li>
       </ul>

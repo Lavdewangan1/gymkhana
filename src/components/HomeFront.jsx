@@ -10,12 +10,13 @@ function HomeFront() {
 
     const handleCarouselChange = (index) => {
         setActiveIndex(index);
+        console.log(index);
     };
 
     return (
         <section>
             <div className=" flex items-center justify-center w-screen h-fit home-content relative lg:flex-nowrap flex-wrap">
-                <Carousel images={images} className="overflow-x-hidden home-carousel select-none lg:w-5/6 w-full" onChange={handleCarouselChange} />
+                <Carousel images={images} className="overflow-x-hidden home-carousel select-none lg:w-5/6 w-screen" onChange={handleCarouselChange} />
                 <div className=" lg:w-2/6 flex justify-center lg:static lg:mr-10 absolute lg:translate-x-0 -translate-x-1/2 left-1/2 bottom-0 home-head w-full">
 
                     {/* <ReactCarousel
@@ -37,13 +38,13 @@ function HomeFront() {
                         ))}
                     </ReactCarousel> */}
 
-                    <AnimatePresence>
+                    <AnimatePresence mode="wait">
                             <motion.h1
                                 className={`font-bold text-center lg:text-black text-white lg:text-[4.5vw] text-[6vw] exo-2 overflow-hidden w-full`}
-                                key={headings[activeIndex]}
-                                initial={{ y: 20, opacity: 0, display: "none" }}
-                                animate={{ y: 0, opacity: 1, display: "block"}}
-                                exit={{ opacity: 0, display: "none"}}
+                                key={activeIndex}
+                                initial={{ y: 20, opacity: 0 }}
+                                animate={{ y: 0, opacity: 1}}
+                                exit={{ opacity: 0}}
                                 transition={{ duration: 0.25}}
                             >
                                 {headings[activeIndex]}

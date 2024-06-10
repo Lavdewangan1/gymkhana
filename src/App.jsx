@@ -3,16 +3,14 @@ import './assets/fonts.css'
 import './App.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import GuidePage from './pages/GuidePage';
 import { Route, Routes } from 'react-router-dom';
 import HomePage from './pages/HomePage';
-import AddExercisePage from './pages/AddExercisePage';
 import { ThemeContext } from './context/theme';
 import PageNotFound from './components/PageNotFound';
-import SchedulePage from './pages/SchedulePage';
 import Trainers from './pages/Trainers';
 import Membership from './pages/Membership';
 import About from './pages/About';
+import Contact from './pages/Contact';
 
 function App() {
   const { theme, navHeight } = useContext(ThemeContext);
@@ -32,12 +30,10 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<HomePage />} />
-          <Route path='/GuidePage' element={<GuidePage />} />
           <Route path='/Trainers' element={<Trainers />} />
           <Route path='/Membership' element={<Membership />} />
+          <Route path='/Contact' element={<Contact />} />
           <Route path='/About' element={<About />} />
-          <Route path='/SchedulePage' element={<SchedulePage />} />
-          <Route path='/AddExercisePage' element={<AddExercisePage />} />
           <Route path='*' element={<PageNotFound />} />
         </Routes>
         <Footer />
