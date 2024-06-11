@@ -5,7 +5,7 @@ import Text from './ui/Text'
 
 function WhoCan() {
     return (
-        <section className=" who-can h-fit flex flex-col items-center">
+        <section className=" who-can h-fit flex flex-col items-center py-[5%]">
             <Heading className=" text-tertiary">
                 Anyone Can Join
             </Heading>
@@ -15,11 +15,17 @@ function WhoCan() {
                     <Text className="text-center font-bold text-black">
                         Beginners
                     </Text>
+                    <Text className="text-center text-black">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur ratione eligendi, deserunt necessitatibus, nemo harum commodi eius debitis et illum incidunt dicta, quas eos magnam.
+                    </Text>
                 </Card>
                 <Card className=" shadow-white bg-tertiary lg:basis-[40%]">
                     <img src="https://i0.wp.com/www.muscleandfitness.com/wp-content/uploads/2020/03/Bald-Man-Performing-Incline-Dumbbell-Press-In-Gym.jpg?quality=86&strip=all" alt="gym bro" />
                     <Text className="text-center font-bold text-black">
                         Intermediate
+                    </Text>
+                    <Text className="text-center text-black">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur ratione eligendi, deserunt necessitatibus, nemo harum commodi eius debitis et illum incidunt dicta, quas eos magnam.
                     </Text>
                 </Card>
             </div>

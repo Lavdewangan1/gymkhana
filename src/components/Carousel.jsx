@@ -18,8 +18,8 @@ const Carousel = ({ images, className, onChange }) => {
                 onChange={onChange}
             >
                 {images.map((image, index) => (
-                    <div key={index}>
-                        <img src={image} alt="carousel image"/>
+                    <div key={index} className=''>
+                        <img src={image} alt="carousel image" className=''/>
                     </div>
                 ))}
             </ReactCarousel>

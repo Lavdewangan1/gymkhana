@@ -6,23 +6,23 @@ import { AnimatePresence } from "framer-motion";
 function HomeFront() {
     const h1Ref = useRef(null);
     const [activeIndex, setActiveIndex] = useState(0);
-    const images = ["https://t4.ftcdn.net/jpg/03/17/72/47/360_F_317724775_qHtWjnT8YbRdFNIuq5PWsSYypRhOmalS.jpg", "https://t4.ftcdn.net/jpg/03/17/72/47/360_F_317724775_qHtWjnT8YbRdFNIuq5PWsSYypRhOmalS.jpg", "https://t4.ftcdn.net/jpg/03/17/72/47/360_F_317724775_qHtWjnT8YbRdFNIuq5PWsSYypRhOmalS.jpg", "https://t4.ftcdn.net/jpg/03/17/72/47/360_F_317724775_qHtWjnT8YbRdFNIuq5PWsSYypRhOmalS.jpg", "https://t4.ftcdn.net/jpg/03/17/72/47/360_F_317724775_qHtWjnT8YbRdFNIuq5PWsSYypRhOmalS.jpg"];
+    const images = ["https://cdn.gulte.com/wp-content/uploads/2020/05/Golds-Gym-Bankruptcy.jpg", "https://goldsgym.com.au/wp-content/uploads/2020/10/Golds-Gym-Girl-Squad-1.webp", "https://content.jdmagicbox.com/comp/raipur-chhattisgarh/v4/9999px771.x771.110517093840.e6v4/catalogue/gold-s-gym-shanker-nagar-raipur-chhattisgarh-men-gyms-cjjd1v67f9.jpg", "https://img.etimg.com/thumb/msid-76255590,width-640,height-480,imgsize-934429,resizemode-4/golds-gym.jpg", "https://cdn.shopify.com/s/files/1/0558/6413/1764/files/Rewrite_Gold_s_Gym_Logo_Design_History_Evolution_0_1024x1024.jpg?v=1694740257"];
 
-    const headings = ["Your Destination for 1", "Your Destination for 2", "Your Destination for 3", "Your Destination for 4", "Your Destination for 5"];
+    const headings = ["Best GYM in the World", "With cool trainers", "At an affordable cost", "With all the equipments", "And a lovely environment"];
 
     useEffect(() => {
         const node = h1Ref.current;
-    
+
         function handleAnimationEnd() {
             node.classList.remove('animate-fadeIn');
             node.removeEventListener('animationend', handleAnimationEnd);
         }
-    
+
         if (node) {
             node.classList.add('animate-fadeIn');
             node.addEventListener('animationend', handleAnimationEnd);
         }
-    
+
         return () => {
             if (node) {
                 node.removeEventListener('animationend', handleAnimationEnd);
@@ -37,7 +37,7 @@ function HomeFront() {
     return (
         <section>
             <div className=" flex items-center justify-center w-screen h-fit home-content relative lg:flex-nowrap flex-wrap">
-                <Carousel images={images} className="overflow-x-hidden home-carousel select-none lg:w-5/6 w-screen" onChange={handleCarouselChange} />
+                <Carousel images={images} className="overflow-hidden home-carousel select-none aspect-video lg:w-5/6 w-screen" onChange={handleCarouselChange} />
                 <div className=" lg:w-2/6 flex justify-center lg:static lg:mr-10 absolute lg:translate-x-0 -translate-x-1/2 left-1/2 bottom-0 home-head w-full">
 
                     {/* <ReactCarousel
@@ -60,7 +60,7 @@ function HomeFront() {
                     </ReactCarousel> */}
 
                     <AnimatePresence mode="wait">
-                        <h1 ref={h1Ref} className="font-bold text-center lg:text-black text-white lg:text-[4.5vw] text-[6vw] exo-2 overflow-hidden w-full animate-fadeIn">
+                        <h1 ref={h1Ref} style={{ textShadow: '2px 2px 2px black' }} className="font-bold text-center text-white shadow-black lg:text-[4.5vw] text-[6vw] exo-2 overflow-hidden w-fit animate-fadeIn">
                             {headings[activeIndex]}
                         </h1>
                         {/* <motion.h1

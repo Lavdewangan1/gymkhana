@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { ThemeContext } from "../context/theme";
 import { NavLink } from "react-router-dom";
 import clsx from "clsx";
+import logo from "../assets/logo.png";
 import { useRef } from "react";
 import { useEffect } from "react";
 
@@ -57,7 +58,7 @@ export default function Navbar() {
         to="/"
       >
         <img
-          src="https://user-images.githubusercontent.com/88102392/233238344-b05e3c5d-178e-4a7b-9757-60063fb0f969.png"
+          src={logo}
           className="inline-flex h-[1] w-10 items-center justify-center rounded-lg"
           alt="Gym Junkies logo"
           loading="lazy"
