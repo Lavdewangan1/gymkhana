@@ -1,8 +1,8 @@
-import React, { createContext, useState, useLayoutEffect } from "react"
+import React, { createContext, useState, useLayoutEffect } from "react";
 import sun from "../assets/icons/sun.svg";
 import moon from "../assets/icons/moon.svg";
 
-const ThemeContext = createContext("dark")
+const ThemeContext = createContext("dark");
 
 const lightTheme = {
   name: "light",
@@ -17,7 +17,7 @@ const lightTheme = {
     background: "#fff",
     color: "#000",
   },
-}
+};
 
 const darkTheme = {
   name: "dark",
@@ -32,32 +32,33 @@ const darkTheme = {
     background: "#111827",
     color: "#fff",
   },
-}
-
+};
 
 const ThemeProvider = ({ children }) => {
   const navHeight = "72px";
-  const [theme, setTheme] = useState(lightTheme)
-  const [themeName, setThemeName] = useState("light")
+  const [theme, setTheme] = useState(lightTheme);
+  const [themeName, setThemeName] = useState("light");
   const toggleTheme = () => {
-    const newTheme = theme === lightTheme ? darkTheme : lightTheme
-    const newThemeName = themeName === "light" ? "dark" : "light"
-    setTheme(newTheme)
-    setThemeName(newThemeName)
-    localStorage.setItem("selectedTheme", newThemeName)
-  }
-
+    const newTheme = theme === lightTheme ? darkTheme : lightTheme;
+    const newThemeName = themeName === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    setThemeName(newThemeName);
+    localStorage.setItem("selectedTheme", newThemeName);
+  };
 
   useLayoutEffect(() => {
-    const savedTheme = localStorage.getItem("selectedTheme")
+    const savedTheme = localStorage.getItem("selectedTheme");
     if (savedTheme) {
-      savedTheme === "light" ? setThemeName("light") : setThemeName("dark")
-      savedTheme === "light" ? setTheme(lightTheme) : setTheme(darkTheme)
+      savedTheme === "light" ? setThemeName("light") : setThemeName("dark");
+      savedTheme === "light" ? setTheme(lightTheme) : setTheme(darkTheme);
     }
+  }, []);
 
-  }, [])
+  return (
+    <ThemeContext.Provider value={{ theme, toggleTheme, themeName, navHeight }}>
+      {children}
+    </ThemeContext.Provider>
+  );
+};
 
-  return <ThemeContext.Provider value={{ theme, toggleTheme, themeName, navHeight }}>{children}</ThemeContext.Provider>
-}
-
-export { ThemeProvider, ThemeContext }
+export { ThemeProvider, ThemeContext };

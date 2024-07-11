@@ -36,11 +36,12 @@ nav>ul {
   transition: all 0.3s ease-in-out;
 }
 
-.add-shadow{
+.add-shadow {
   box-shadow: 10px 10px 0 0;
   transition: box-shadow 0.3s ease-in-out;
 }
-.add-shadow:hover{
+
+.add-shadow:hover {
   box-shadow: 3px 3px 0 0;
 }
 
@@ -152,6 +153,7 @@ nav>ul {
   .who-can {
     padding-bottom: 10px;
   }
+
   .who-can::before {
     height: 100%;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 93%);
@@ -169,7 +171,7 @@ nav>ul {
     clip-path: polygon(0% 0%, 100% 1%, 100% 100%, 0% 100%);
   }
 
-  .popular-plans::before{
+  .popular-plans::before {
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
   }
 
@@ -228,6 +230,13 @@ nav>ul {
 
 /* Utility animations */
 @keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
